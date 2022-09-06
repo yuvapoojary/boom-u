@@ -70,7 +70,7 @@ class Header extends React.Component {
                   Login
                 </a>
                 <a
-                  href="https://boominance.com/buyer/sign-up"
+                  href="https://boominance.com/buyer/register"
                   class="theme-btn bg-color"
                 >
                   Sign Up
