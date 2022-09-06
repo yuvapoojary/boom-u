@@ -66,7 +66,7 @@ class Header extends React.Component {
                 </div>
               </div>
               <div class="header-right-element">
-                <a href="https://boominance.com/buyer/login" class="color-2">
+                <a href="https://boominance.com/buyer" class="color-2">
                   Login
                 </a>
                 <a
@@ -116,10 +116,16 @@ class Header extends React.Component {
                         <a href="features">Features</a>
                       </li>
                     </ul>
-                    <a href="" class="theme-btn d-block mt-4 text-center ms-0">
+                    <a
+                      href="https://boominance.com/buyer"
+                      class="theme-btn d-block mt-4 text-center ms-0"
+                    >
                       Login
                     </a>
-                    <a href="" class="theme-btn d-block mt-4 text-center ms-0">
+                    <a
+                      href="https://boominance.com/buyer/register"
+                      class="theme-btn d-block mt-4 text-center ms-0"
+                    >
                       Signup
                     </a>
                   </nav>
