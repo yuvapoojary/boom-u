@@ -1,0 +1,101 @@
+/*
+Theme Name: Xmoze
+Author: ModinaTheme
+Author URI: https://themeforest.net/user/modinatheme/
+Description: SaaS Bootstrap HTML5 Landing Template
+Version: 1.0.0
+*/
+
+/*
+=================================
+|***    Table of contents:   ***|
+=================================
+
+Main Style file-> assets/css/style.css 
+
+All the SCSS File in SCSS Folder of Assets Folder. You can read the doc file also for better understand.
+
+// BASIC
+@import 'https://codexpeed.com/html/xmoze/basic';
+
+// MIXIN
+@import 'https://codexpeed.com/html/xmoze/variables';
+
+// TYPOGRAPHY
+@import 'https://codexpeed.com/html/xmoze/typography';
+
+// MIX
+@import 'https://codexpeed.com/html/xmoze/mix';
+
+// HELPER
+@import 'https://codexpeed.com/html/xmoze/helper';
+
+// ICON FONTS
+@import 'https://codexpeed.com/html/xmoze/icon';
+
+// ANIMATION
+@import 'https://codexpeed.com/html/xmoze/animation';
+
+// Button 
+@import 'https://codexpeed.com/html/xmoze/btn';
+
+// Colors 
+@import 'https://codexpeed.com/html/xmoze/colors';
+
+// Preloader 
+@import 'https://codexpeed.com/html/xmoze/preloader';
+
+/* ----------------------------------
+    Template Section Styles
+ ------------------------------------*/
+
+ /* // Menu - Header Section 
+ @import 'https://codexpeed.com/html/xmoze/header';
+ 
+ // Hero Slide - Section 
+ @import 'https://codexpeed.com/html/xmoze/hero';
+ 
+ // Section Title - Heading 
+ @import 'https://codexpeed.com/html/xmoze/section';
+ 
+ // About - Section 
+ @import 'https://codexpeed.com/html/xmoze/about';
+ 
+ // Features - Section 
+ @import 'https://codexpeed.com/html/xmoze/features';
+ 
+ // services - Section 
+ @import 'https://codexpeed.com/html/xmoze/services';
+ 
+ // testimonial - Section 
+ @import 'https://codexpeed.com/html/xmoze/testimonial';
+ 
+ // Portfolio - Cases - Section 
+ @import 'https://codexpeed.com/html/xmoze/project';
+ 
+ // Price Table - Section 
+ @import 'https://codexpeed.com/html/xmoze/price';
+ 
+ // Call To Action - Section 
+ @import 'https://codexpeed.com/html/xmoze/cta';
+ 
+ // team - Section 
+ @import 'https://codexpeed.com/html/xmoze/team';
+ 
+ // funfact - Section 
+ @import 'https://codexpeed.com/html/xmoze/funfact';
+ 
+ // FAQ - Section 
+ @import 'https://codexpeed.com/html/xmoze/faq';
+ 
+ // Blog - Section 
+ @import 'https://codexpeed.com/html/xmoze/blog';
+ 
+ // Contact Us - Section 
+ @import 'https://codexpeed.com/html/xmoze/contact';
+ 
+ // footer - Section 
+ @import 'https://codexpeed.com/html/xmoze/footer';n facts */
+
+
+

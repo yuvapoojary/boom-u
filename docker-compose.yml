@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./
+    restart: on-failure
+    ports:
+      - '80:80'
+      - '443:433'
+    tty: true
+    volumes:
+      - website:/src/website/build
+
+  api:
+    container_name: api
+    build: ./api
+    restart: on-failure
+    ports:
+      - '7555:7555'
+
+  website:
+    container_name: website
+    build: ./website
+    restart: on-failure
+    tty: true
+    volumes:
+      - website:/src/website/build
+
+  admin:
+    container_name: admin
+    build: ./admin
+    restart: on-failure
+
+  buyer:
+    container_name: buyer
+    build: ./buyer
+    restart: on-failure
+
+  seller:
+    container_name: seller
+    build: ./seller
+    restart: on-failure
+
+volumes:
+  website: {}
