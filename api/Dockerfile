@@ -1,9 +1,9 @@
 FROM node
 
-WORKDIR /src/api
+WORKDIR /api
 
-COPY package*.json /src/api/
+COPY package*.json /api/
 RUN npm install
-COPY ./ /src/api/
+COPY ./ /api/
 
 CMD ["node", "server.js"]

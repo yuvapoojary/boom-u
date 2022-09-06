@@ -17,16 +17,15 @@ export default function Header() {
           <img
             className="img-fluid"
             alt=""
-            src="/assets/img/logo.svg"
+            src="%PUBLIC_URL%/assets/img/logo.svg"
             width={150}
           />
         </a>
         <form className="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0 osahan-navbar-search"></form>
         <ul className="navbar-nav ml-auto ml-md-0 osahan-right-navbar">
-         
           <li className="nav-item  no-arrow osahan-right-navbar-user">
             <a className="nav-link  user-dropdown-link" href="/profile">
-              <img alt="Avatar" src="/assets/img//user.png" />
+              <img alt="Avatar" src="%PUBLIC_URL%/assets/img//user.png" />
               {auth.user.Name}
             </a>
           </li>

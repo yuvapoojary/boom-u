@@ -79,7 +79,7 @@ export default function DetailRecommendation() {
                       <a href="#">
                         <img
                           className="card-img-top"
-                          src="/assets/img/v1.webp"
+                          src="%PUBLIC_URL%/assets/img/v1.webp"
                           alt="Card image cap"
                           height={350}
                         />

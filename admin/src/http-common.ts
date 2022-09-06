@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://boominance.com/api';
+axios.defaults.baseURL = '/api';
 
 export default axios.create({
-  baseURL: 'https://boominance.com/api',
+  baseURL: '/api',
   headers: {
     'Content-type': 'application/json',
     'Access-Control-Allow-Origin': true,

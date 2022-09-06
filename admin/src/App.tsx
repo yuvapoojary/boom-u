@@ -4,6 +4,7 @@ import {
   Routes, //replaces "Switch" used till v5
   Route,
 } from 'react-router-dom';
+import './http-common';
 import AddSubCategories from './Components/SubCategories/AddSubCategories';
 import AddRecommender from './Pages/AddRecommender';
 import Buyers from './Pages/Buyer';

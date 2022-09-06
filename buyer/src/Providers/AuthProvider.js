@@ -5,12 +5,12 @@ import React, {
   useEffect,
   useMemo,
   useState,
-} from 'react'
-import axios from 'axios'
+} from 'react';
+import axios from 'axios';
 
-const AuthContext = createContext()
+const AuthContext = createContext();
 
-axios.defaults.baseURL = `https://boominance.com/api`
+axios.defaults.baseURL = `/api`;
 
 axios.interceptors.response.use(
   (response) => response,
@@ -19,35 +19,35 @@ axios.interceptors.response.use(
       return Promise.reject({
         message: err.message,
         ...err.response.data,
-      })
+      });
     } else {
       return Promise.reject({
         message: 'Server is down',
-      })
+      });
     }
   }
-)
+);
 
 export default function AuthProvider({ children }) {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const login = useCallback(
     (data) => {
       return axios.post('/buyer/login', data).then((res) => {
-        localStorage.setItem('token', res.data.accessToken)
-        setUser(res.data)
-      })
+        localStorage.setItem('token', res.data.accessToken);
+        setUser(res.data);
+      });
     },
     [setUser]
-  )
+  );
 
   const logout = useCallback(() => {
-    localStorage.clear()
-    axios.defaults.headers.common['authorization'] = null
-    setUser(null)
-    window.location.href = '/'
-  }, [setUser])
+    localStorage.clear();
+    axios.defaults.headers.common['authorization'] = null;
+    setUser(null);
+    window.location.href = '/';
+  }, [setUser]);
 
   const value = useMemo(
     () => ({
@@ -58,31 +58,31 @@ export default function AuthProvider({ children }) {
       logout,
     }),
     [user, loading, login, logout]
-  )
+  );
 
   const loadUser = async () => {
-    const token = localStorage.getItem('token')
-    if (!token) return setLoading(false)
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    const token = localStorage.getItem('token');
+    if (!token) return setLoading(false);
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     axios
       .get('/buyer/@me')
       .then((res) => setUser(res.data))
       .catch((err) => {
-        console.log(err)
+        console.log(err);
       })
-      .finally(() => setLoading(false))
-  }
+      .finally(() => setLoading(false));
+  };
 
   useEffect(() => {
-    loadUser()
-  }, [])
+    loadUser();
+  }, []);
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export const useAuth = () => {
-  const context = useContext(AuthContext)
-  if (!context) throw new Error('useAuth must be used in AuthProvider')
+  const context = useContext(AuthContext);
+  if (!context) throw new Error('useAuth must be used in AuthProvider');
 
-  return context
-}
+  return context;
+};

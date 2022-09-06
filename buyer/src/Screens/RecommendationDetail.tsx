@@ -4,33 +4,27 @@ import axios from 'axios';
 import useRazorpay from 'react-razorpay';
 import { useAuth } from '../Providers/AuthProvider';
 
-
 export default function DetailRecommendation() {
   const auth = useAuth();
   let country = auth.user.Country;
- let currency ='';
-  if(country==='IN'){
-     currency = "INR"
-  } else if(country ==='UK'){
-     currency = "GBP"
-  } else if(country ==='US'){
-    
-     currency = "USD"
-
-  }else{
-     currency = "HKD"
+  let currency = '';
+  if (country === 'IN') {
+    currency = 'INR';
+  } else if (country === 'UK') {
+    currency = 'GBP';
+  } else if (country === 'US') {
+    currency = 'USD';
+  } else {
+    currency = 'HKD';
   }
 
-  
   const params = useParams();
   const Razorpay = useRazorpay();
   const navigate = useNavigate();
   var recommendationID = params.recommendationID;
-  
+
   console.log(recommendationID);
 
-
-  
   const [recommendation, getData] = useState<any>({});
 
   const URL = `https://boominance.herokuapp.com/recommendation/${recommendationID}`;
@@ -48,10 +42,6 @@ export default function DetailRecommendation() {
       })
       .catch((error) => console.log(`${error}`));
   };
-
- 
-
-
 
   const [orderCount, getOrderData] = useState<any>({});
 
@@ -75,7 +65,7 @@ export default function DetailRecommendation() {
     const { data } = await axios.post('/orders', {
       recommendationId: recommendationID,
       seller: recommendation.Seller._id,
-      currency : currency,
+      currency: currency,
       SellerCreationDate: recommendation.Seller.createdAt,
       type,
     });
@@ -92,7 +82,7 @@ export default function DetailRecommendation() {
         });
       },
     });
-    console.log(rz1)
+    console.log(rz1);
     rz1.open();
   };
 
@@ -107,8 +97,7 @@ export default function DetailRecommendation() {
       .get(`${reviewULR}`)
       .then((res) => {
         const reviewsdata = res.data;
-        
-       
+
         getReviews(reviewsdata);
       })
       .catch((error) => console.log(`${error}`));
@@ -126,7 +115,7 @@ export default function DetailRecommendation() {
                       <a href="#">
                         <img
                           className="card-img-top"
-                          src="/assets/img/v1.webp"
+                          src="%PUBLIC_URL%/assets/img/v1.webp"
                           alt="Card image cap"
                           height={350}
                         />
@@ -251,7 +240,7 @@ export default function DetailRecommendation() {
                             onClick={() => makePayment('report')}
                             className="btn btn-lg btn-primary"
                           >
-                            Buy Detailed Analysis @ {currency} {' '}
+                            Buy Detailed Analysis @ {currency}{' '}
                             {recommendation.DetailedReport.Price}
                           </button>
                         </>
@@ -259,43 +248,37 @@ export default function DetailRecommendation() {
                     </div>
                   </div>
                   <div className="box mb-3 single-video-comment-tabs">
-  
-  <div className="tab-content">
-   
-    <div
-      className="tab-pane fade show active"
-      id="retro-comments"
-      role="tabpanel"
-      aria-labelledby="retro-comments-tab"
-    >
-      
-
-      {reviews.map((rev) => 
-      <div className="reviews-members">
-        <div className="media">
-          
-          <div className="media-body">
-            <div className="reviews-members-header">
-              <h6 className="mb-1">
-                <a className="text-black" href="#">
-                  {rev.buyer.Name}
-                </a>{" "}
-                <small className="text-gray">Registered Buyer</small>
-              </h6>
-            </div>
-            <div className="reviews-members-body">
-              <p>
-               {rev.Review}
-              </p>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-       )}
-    </div>
-  </div>
-</div>
+                    <div className="tab-content">
+                      <div
+                        className="tab-pane fade show active"
+                        id="retro-comments"
+                        role="tabpanel"
+                        aria-labelledby="retro-comments-tab"
+                      >
+                        {reviews.map((rev) => (
+                          <div className="reviews-members">
+                            <div className="media">
+                              <div className="media-body">
+                                <div className="reviews-members-header">
+                                  <h6 className="mb-1">
+                                    <a className="text-black" href="#">
+                                      {rev.buyer.Name}
+                                    </a>{' '}
+                                    <small className="text-gray">
+                                      Registered Buyer
+                                    </small>
+                                  </h6>
+                                </div>
+                                <div className="reviews-members-body">
+                                  <p>{rev.Review}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
