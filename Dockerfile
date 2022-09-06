@@ -2,31 +2,35 @@ FROM node as build-stage
 
 # admin
 WORKDIR /admin
-COPY ./admin/package.json /admin/
-RUN npm install
-COPY ./admin /admin/
-RUN npm run build
+# COPY ./admin/package.json /admin/
+# RUN npm install
+# COPY ./admin /admin/
+# RUN npm run build
+COPY ./admin/build /admin/build/
 
 # website
 WORKDIR /website
-COPY ./website/package.json /website/
-RUN npm install
-COPY ./website /website/
-RUN npm run build
+# COPY ./website/package.json /website/
+# RUN npm install
+# COPY ./website /website/
+# RUN npm run build
+COPY ./website/build /website/build/
 
 # buyer
 WORKDIR /buyer
-COPY ./buyer/package.json /buyer/
-RUN npm install -f
-COPY ./buyer /buyer/
-RUN npm run build
+# COPY ./buyer/package.json /buyer/
+# RUN npm install -f
+# COPY ./buyer /buyer/
+# RUN npm run build
+COPY ./buyer/build /buyer/build/
 
 # recommender
 WORKDIR /recommender
-COPY ./seller/package.json /recommender/
-RUN npm install -f
-COPY ./seller /recommender/
-RUN npm run build
+# COPY ./seller/package.json /recommender/
+# RUN npm install -f
+# COPY ./seller /recommender/
+# RUN npm run build
+COPY ./seller/build /recommender/build/
 
 # nginx 
 FROM nginx:1.15
