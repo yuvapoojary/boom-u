@@ -7,37 +7,37 @@ export default function Navigation(){
             <nav className="horizontalMenu clearfix">
               <ul className="horizontalMenu-list">
                 <li aria-haspopup="true">
-                  <a href="/" className="sub-icon">
+                  <a href="/admin/" className="sub-icon">
                     <i className="fe fe-airplay" /> Dashboard
                   
                   </a>
                   
                 </li>
                 <li aria-haspopup="true">
-                  <a href="/recommenders" className="">
+                  <a href="/admin/recommenders" className="">
                     <i className="fe fe-box" /> Recommenders
                   </a>
                   <ul className="sub-menu">
-                    <li><a href='/add-recommender'>Add Recommender</a></li><li><a href='/recommenders'>View Recommenders
+                    <li><a href='/admin/add-recommender'>Add Recommender</a></li><li><a href='/admin/recommenders'>View Recommenders
                         </a></li>
                   </ul>
                 </li>
                 <li aria-haspopup="true">
-                  <a href="/buyers" className="sub-icon">
+                  <a href="/admin/buyers" className="sub-icon">
                     <i className="fe fe-database" /> Buyers
                    
                   </a>
                   
                 </li>
                 <li aria-haspopup="true">
-                  <a href="/orders" className="sub-icon">
+                  <a href="/admin/orders" className="sub-icon">
                     <i className="fe fe-pie-chart" /> Orders
                    
                   </a>
                  
                 </li>
                 <li aria-haspopup="true">
-                  <a href="/revenue" className="sub-icon">
+                  <a href="/admin/revenue" className="sub-icon">
                     <i className="fe fe-layers" /> Revenue
                   
                   </a>

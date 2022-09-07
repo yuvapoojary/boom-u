@@ -7,14 +7,14 @@ export default function Header() {
             <a id="horizontal-navtoggle" className="animated-arrow hor-toggle">
               <span />
             </a>
-            <a className="header-brand" href="/">
+            <a className="header-brand" href="/admin/">
               <img
-                src="%PUBLIC_URL%/assets/images/brand/logo-2.svg"
+                src="/admin/assets/images/brand/logo-2.svg"
                 className="header-brand-img desktop-logo"
                 alt="Boominance logo"
               />
               <img
-                src="%PUBLIC_URL%/assets/images/brand/logo-1.png"
+                src="/admin/assets/images/brand/logo-1.png"
                 className="header-brand-img mobile-view-logo"
                 alt="Boominance logo"
               />
@@ -33,7 +33,7 @@ export default function Header() {
                 <a href="#" className="nav-link " data-toggle="dropdown">
                   <span>
                     <img
-                      src="/assets/images/users/male/32.jpg"
+                      src="/admin/assets/images/users/male/32.jpg"
                       alt="profile-user"
                       className="avatar brround cover-image mb-0 ml-0"
                     />
