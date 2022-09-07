@@ -37,7 +37,7 @@ export default function AddPortfolioForm(){
 .then(function (response) {
   if(response.status===200){
       alert('Portfolio Added Successfully');
-      navigate("/buyer/portfolio");
+      navigate("/portfolio");
       
   }
  

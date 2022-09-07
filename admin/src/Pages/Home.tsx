@@ -9,7 +9,7 @@ export default function Home() {
   const navigate = useNavigate();
   const data = localStorage.getItem('access')
 
-  if(data === null){
+  if(!data){
     navigate("/login");
   }
 

@@ -49,7 +49,7 @@ export default function BuyerOrders(){
               <i className="fas fa-info-circle" />
             </a>
             <a href={`/buyer/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>
-              <img className="img-fluid" src="assets/img/v1.webp" alt="" />
+              <img className="img-fluid" src="assets/img/v1.png" alt="" />
             </a>
            
           </div>

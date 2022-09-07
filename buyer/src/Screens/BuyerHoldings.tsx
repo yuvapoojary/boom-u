@@ -10,6 +10,36 @@ export default function BuyerHoldings(){
     const buyerID = auth.user._id;
     const [recomm, getData] = useState<any[]>([]);
 
+    // function delete() {
+    //   var data = JSON.stringify({
+    //     seller: sellerID,
+    //     buyer: auth.user._id,
+    //   });
+  
+    //   console.log(data);
+    //   var config = {
+    //     method: 'post',
+    //     url: '/followers/',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     data: data,
+    //   };
+    //   axios(config)
+    //     .then(function (response) {
+    //       if (response.status === 200) {
+    //         alert('You started Following, you will get updates');
+    //       }
+    //     })
+    //     .catch(function (error) {
+    //       alert('Error in adding recommender');
+    //     });
+    // }
+
+
+
+
+
   const URL = `/portfolioHoldings/${portfolioId}`;
 
   useEffect(() => {

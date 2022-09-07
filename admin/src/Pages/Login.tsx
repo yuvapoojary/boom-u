@@ -32,7 +32,7 @@ export default function Login() {
         let access = dat.accessToken;
         if (access !== null) {
           localStorage.setItem('access', access);
-          navigate('/admin');
+          navigate('/');
         }
       })
       .catch(function (error) {

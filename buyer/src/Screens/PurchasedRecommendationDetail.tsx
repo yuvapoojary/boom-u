@@ -125,27 +125,14 @@ export default function PurchasedDetailRecommendation() {
               <div className="row">
                 <div className="col-md-12">
                   <div className="card blog mb-4">
-                    <div className="blog-header">
-                      <a href="#">
-                        <img
-                          className="card-img-top"
-                          src="/buyer/assets/img/v1.webp"
-                          alt="Card image cap"
-                          height={350}
-                        />
-                      </a>
-                    </div>
+                   
                     <div className="card-body">
                       <h4 className="card-title">
                         <a href="#">{recommendation.Recommendation}</a>
                       </h4>
                       <div className="entry-meta">
                         <ul className="tag-info list-inline">
-                          <li className="list-inline-item">
-                            <a href="#">
-                              <i className="fas fa-calendar" /> March 6, 2018
-                            </a>
-                          </li>
+                         
                           {/* <li className="list-inline-item">
               <i className="fas fa-folder" />{" "}
               <a rel="category tag" href="#">

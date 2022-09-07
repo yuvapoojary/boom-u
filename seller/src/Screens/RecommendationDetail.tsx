@@ -46,26 +46,7 @@ export default function DetailRecommendation() {
       .catch((error) => console.log(`${error}`));
   };
 
-  const makePayment = async (type: string) => {
-    const { data } = await axios.post('/orders', {
-      recommendationId: recommendationID,
-      type,
-    });
-    console.log(data);
-    const rz1 = new Razorpay({
-      key: data.keyId,
-      order_id: data.orderId,
-      currency: 'INR',
-      name: 'Boominance',
-      amount: `${data.amount * 100}`,
-      handler: function (response) {
-        axios.post(`/orders/${data.id}`, response).then((res) => {
-          alert('sucess');
-        });
-      },
-    });
-    rz1.open();
-  };
+  
   return (
     <>
       <div id="content-wrapper">
@@ -75,16 +56,7 @@ export default function DetailRecommendation() {
               <div className="row">
                 <div className="col-md-12">
                   <div className="card blog mb-4">
-                    <div className="blog-header">
-                      <a href="#">
-                        <img
-                          className="card-img-top"
-                          src="%PUBLIC_URL%/assets/img/v1.webp"
-                          alt="Card image cap"
-                          height={350}
-                        />
-                      </a>
-                    </div>
+                    
                     <div className="card-body">
                       <h4 className="card-title">
                         <a href="#">{recommendation.Recommendation}</a>
@@ -109,59 +81,53 @@ export default function DetailRecommendation() {
                             <th>Target</th>
                             <td>
                               {' '}
-                              {recommendation.TargetVisible === true ? (
-                                recommendation.Target
-                              ) : (
-                                <span className="fas fa-lock" />
-                              )}
+                             
+                               {recommendation.Target}
+                            
                             </td>
                           </tr>
                           <tr>
                             <th>Target Period</th>
                             <td>
-                              {' '}
-                              {recommendation.TargetPeriodVisible === true ? (
-                                recommendation.TargetPeriod
-                              ) : (
-                                <span className="fas fa-lock" />
-                              )}
+                            {recommendation.TargetPeriod}
+                             
                             </td>
                           </tr>
                           <tr>
                             <th>Sector</th>
                             <td>
-                              {recommendation.SectorVisible === true ? (
-                                recommendation.Sector
-                              ) : (
-                                <span className="fas fa-lock" />
-                              )}
+                               {recommendation.Sector}
+                              
                             </td>
                           </tr>
                           <tr>
                             <th>Market Captalization</th>
                             <td>
-                              {' '}
-                              {recommendation.MarketCaptilizationVisible ===
-                              true ? (
-                                recommendation.MarketCaptilization
-                              ) : (
-                                <span className="fas fa-lock" />
-                              )}
+                              {recommendation.MarketCaptilization}
                             </td>
                           </tr>
                         </thead>
                       </table>
 
                       <button
-                        onClick={() => makePayment('content')}
+                        
                         className="btn btn-lg btn-primary"
                       >
-                        Buy Content @ INR {recommendation.price}
+                         Content @ INR {recommendation.price}
                       </button>
+
+                      <button
+                            
+                            className="btn btn-lg btn-primary mx-3"
+                          >
+                             Detailed Analysis @ INR{' '}
+                            {recommendation.DetailedReport.Price}
+                          </button>
 
                       <hr />
                       {recommendation.isDetailedReport === true ? (
                         <>
+                        
                           <h5>Detailed Analysis Includes</h5>
                           <p>{recommendation.DetailedReport.Includes}</p>
                           <table className="table table-bordered ">
@@ -169,27 +135,90 @@ export default function DetailRecommendation() {
                               <tr>
                                 <th>Value Proposition</th>
                                 <td>
-                                  {' '}
-                                  <i className="fas fa-lock" />
+                                  PE Ratio:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.PE
+                                  }
+                                  <br />
+                                  PBE Ratio:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.PBE
+                                  }
+                                  <br />
+                                  EBITDA Ratio:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.EBITDA
+                                  }
+                                  <br />
+                                  RoE Ratio:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.RoE
+                                  }
+                                  <br />
+                                  EPS Ratio:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.EPS
+                                  }
+                                  <br />
+                                  Dividend Yield:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .ValuationRatioData.DividendYield
+                                  }
                                 </td>
                               </tr>
                               <tr>
                                 <th>Price Performance</th>
+
                                 <td>
-                                  {' '}
-                                  <i className="fas fa-lock" />
+                                  One Week:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .PricePerformance.one_week
+                                  }
+                                  <br />
+                                  One Month:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .PricePerformance.one_month
+                                  }
+                                  <br />
+                                  Three Months:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .PricePerformance.three_months
+                                  }
+                                  <br />
+                                  One Year:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .PricePerformance.one_year
+                                  }
+                                  <br />
+                                  Three Years:{' '}
+                                  {
+                                    recommendation.DetailedReport
+                                      .PricePerformance.three_years
+                                  }
                                 </td>
                               </tr>
                             </thead>
                           </table>
-
-                          <button
-                            onClick={() => makePayment('report')}
-                            className="btn btn-lg btn-primary"
+                          <a
+                            className="btn btn-primary text-white"
+                            href={recommendation.Image}
+                            target="_blank"
+                            rel="noreferrer"
                           >
-                            Buy Detailed Analysis @ INR{' '}
-                            {recommendation.DetailedReport.Price}
-                          </button>
+                            View Media
+                          </a>
+
+                         
                         </>
                       ) : null}
                     </div>

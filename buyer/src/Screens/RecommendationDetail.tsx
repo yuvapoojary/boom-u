@@ -111,16 +111,7 @@ export default function DetailRecommendation() {
               <div className="row">
                 <div className="col-md-12">
                   <div className="card blog mb-4">
-                    <div className="blog-header">
-                      <a href="#">
-                        <img
-                          className="card-img-top"
-                          src="/buyer/assets/img/v1.webp"
-                          alt="Card image cap"
-                          height={350}
-                        />
-                      </a>
-                    </div>
+                    
                     <div className="card-body">
                       <h4 className="card-title">
                         <a href="#">{recommendation.Recommendation}</a>

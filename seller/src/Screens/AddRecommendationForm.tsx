@@ -46,23 +46,23 @@ export default function RecommendationForm() {
   const [target, setTarget] = useState('');
   const [TargetVisible, setTargetVisible] = useState(false);
   const [targetperiod, settargetperiod] = useState('');
-  const [targetPeriodVisible, settargetPeriodVisible] = useState('');
+  const [targetPeriodVisible, settargetPeriodVisible] = useState(false);
   const [currentmarketprice, setcurrentmarketprice] = useState('');
   const [currentmarketpriceVisible, setcurrentmarketpriceVisible] =
-    useState('');
+    useState(false);
   const [Sector, setSector] = useState('');
-  const [SectorVisible, setSectorVisible] = useState('');
+  const [SectorVisible, setSectorVisible] = useState(false);
   const [MarketCaptilization, setMarketCaptilization] = useState('');
   const [MarketCaptilizationVisible, setMarketCaptilizationVisible] =
-    useState('');
+    useState(false);
   const [Category, setCategory] = useState('');
-  const [CategoryVisible, setCategoryVisible] = useState('');
+  const [CategoryVisible, setCategoryVisible] = useState(false);
   const [ContentIncludes, setContentIncludes] = useState('');
   const [sub_category_id, setsub_category_id] = useState('');
   const [Sell, setSell] = useState('');
-  const [SellVisible, setSellVisible] = useState('');
+  const [SellVisible, setSellVisible] = useState(false);
   const [Buy, setBuy] = useState('');
-  const [BuyVisible, setBuyVisible] = useState('');
+  const [BuyVisible, setBuyVisible] = useState(false);
   const [subCategoryValue, setsubCategoryValue] = useState('');
   const [price, setprice] = useState('');
   const [isDetailedReport, setisDetailedReport] = useState('');
@@ -94,24 +94,24 @@ export default function RecommendationForm() {
     data.append('TargetVisible', TargetVisible);
     data.append('targetperiod', targetperiod);
     //@ts-ignore
-    data.append('targetPeriodVisible', false);
+    data.append('targetPeriodVisible', targetPeriodVisible);
     data.append('currentmarketprice', currentmarketprice);
     //@ts-ignore
-    data.append('currentmarketpriceVisible', false);
+    data.append('currentmarketpriceVisible', currentmarketpriceVisible);
     data.append('Sector', Sector);
     //@ts-ignore
-    data.append('SectorVisible', false);
+    data.append('SectorVisible', SectorVisible);
     data.append('MarketCaptilization', MarketCaptilization);
     //@ts-ignore
-    data.append('MarketCaptilizationVisible', false);
+    data.append('MarketCaptilizationVisible', MarketCaptilizationVisible);
     data.append('Category', Category);
     //@ts-ignore
-    data.append('SellVisible', false);
+    data.append('SellVisible', SellVisible);
     //@ts-ignore
-    data.append('CategoryVisible', false);
+    data.append('CategoryVisible', CategoryVisible);
     data.append('Sell', Sell);
     //@ts-ignore
-    data.append('BuyVisible', false);
+    data.append('BuyVisible', BuyVisible);
     data.append('Buy', Buy);
     //@ts-ignore
     data.append('category_id', categoryID);
@@ -232,6 +232,28 @@ export default function RecommendationForm() {
                               <div className="col-md-12">
                                 <div className="form-group">
                                   <label className="form-label">Buy</label>
+                                  
+                                  <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setBuyVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
+                                  
+                                  
                                   <input
                                     className="form-control"
                                     type="text"
@@ -244,6 +266,25 @@ export default function RecommendationForm() {
                               <div className="col-md-12">
                                 <div className="form-group">
                                   <label className="form-label">Sell</label>
+                                  <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setSellVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
                                   <input
                                     className="form-control"
                                     type="text"
@@ -258,27 +299,28 @@ export default function RecommendationForm() {
                           <div className="col-sm-12 col-md-4">
                             <div className="form-group">
                               <label className="form-label">Target</label>
-                              <div className="form-check">
+                              <div className="form-check form-switch">
                                 <input
-                                  className="form-check-input"
+                                  className="form-check-input form-switch"
                                   type="checkbox"
                                   id="flexCheckDefault"
                                   // @ts-ignore
                                   onChange={(e) =>
                                     setTargetVisible(e.target.checked)
                                   }
+
                                 />
                                 <label
                                   className="form-check-label"
                                   // @ts-ignore
                                   for="flexCheckDefault"
                                 >
-                                  Show
+                                  Show On Screen
                                 </label>
                               </div>
                               <input
                                 type="text"
-                                className="form-control"
+                                className="form-control "
                                 value={target}
                                 placeholder="Enter Target"
                                 required
@@ -292,6 +334,25 @@ export default function RecommendationForm() {
                               <label className="form-label">
                                 Target Period
                               </label>
+                              <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    settargetPeriodVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
                               <input
                                 type="text"
                                 className="form-control"
@@ -311,6 +372,25 @@ export default function RecommendationForm() {
                               <label className="form-label">
                                 Current Market Price
                               </label>
+                              <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setcurrentmarketpriceVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
                               <input
                                 type="text"
                                 className="form-control"
@@ -325,6 +405,26 @@ export default function RecommendationForm() {
                           <div className="col-sm-12 col-md-4">
                             <div className="form-group">
                               <label className="form-label">Sector</label>
+                              <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setSectorVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
+                              
                               <input
                                 type="text"
                                 className="form-control"
@@ -344,6 +444,25 @@ export default function RecommendationForm() {
                                   ? 'Conseneus Mechanism'
                                   : 'Market Captilization'}
                               </label>
+                              <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setMarketCaptilizationVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
                               <input
                                 type="text"
                                 className="form-control"
@@ -365,6 +484,25 @@ export default function RecommendationForm() {
                           <div className="col-sm-12 col-md-4">
                             <div className="form-group">
                               <label className="form-label">Category</label>
+                              <div className="form-check form-switch">
+                                <input
+                                  className="form-check-input form-switch"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setCategoryVisible(e.target.checked)
+                                  }
+                                  
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show On Screen
+                                </label>
+                              </div>
                               <input
                                 type="text"
                                 className="form-control"

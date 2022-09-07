@@ -66,7 +66,7 @@ export default function Register() {
 
                 <div className="text-center mt-5">
                   <p className="light-gray">
-                    Already have an account? <a href="/recommender/login">Sign In</a>
+                    Already have an account? <a href="/recommender/">Sign In</a>
                   </p>
                 </div>
               </div>

@@ -50,7 +50,7 @@ export default function Recommendations(){
               <i className="fas fa-info-circle" />
             </a>
             <a href={`/recommender/recommendation/${rPost._id}`}>
-              <img className="img-fluid" src="assets/img/v1.webp" alt="" />
+              <img className="img-fluid" src="assets/img/v1.png" alt="" />
             </a>
            
           </div>

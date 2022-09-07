@@ -65,8 +65,8 @@ export default function Header() {
           </li>
 
           <li className="nav-item  no-arrow osahan-right-navbar-user">
-            <a className="nav-link  user-dropdown-link" href="/profile">
-              <img alt="Avatar" src="/recommender/assets/img//user.png" />
+            <a className="nav-link  user-dropdown-link" href="/recommende/profile">
+              <img alt="Avatar" src="/recommender/assets/img/user.png" />
               {auth.user.Name}
             </a>
           </li>

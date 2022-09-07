@@ -42,7 +42,7 @@ export default function Settings(){
 .then(function (response) {
   if(response.status===200){
       alert('Profile has beeen udated');
-      navigate(`/buyer/settings`);
+      navigate(`/settings`);
       
   }
  
