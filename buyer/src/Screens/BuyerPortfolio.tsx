@@ -38,7 +38,7 @@ export default function BuyerPortfolio(){
 <div className="col-lg-6 text-right ">
         
        
-          <a href= {`/add-portfolio`} className="mb-3  btn btn-primary ">Add New Portfolio</a>
+          <a href= {`/buyer/add-portfolio`} className="mb-3  btn btn-primary ">Add New Portfolio</a>
           
           
        
@@ -50,7 +50,7 @@ export default function BuyerPortfolio(){
         <div className="card-body iconfont text-left">
           <h6 className="mb-3">{New.title}</h6>
           <p className="mb-3">{New.description}</p>
-          <a href= {`/holdings/${New._id}`} className="mb-3  btn btn-primary">View or Add Holdings</a>
+          <a href= {`/buyer/holdings/${New._id}`} className="mb-3  btn btn-primary">View or Add Holdings</a>
           
           
         </div>
@@ -78,7 +78,7 @@ else{return(<><div id="content-wrapper">
 <div className="col-lg-6 text-right ">
         
        
-          <a href= {`/add-portfolio`} className="mb-3  btn btn-primary ">Add New Portfolio</a>
+          <a href= {`/buyer/add-portfolio`} className="mb-3  btn btn-primary ">Add New Portfolio</a>
           
           
        

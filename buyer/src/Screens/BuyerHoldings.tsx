@@ -41,7 +41,7 @@ export default function BuyerHoldings(){
 <div className="col-lg-6 text-right ">
         
        
-          <a href= {`/add-holding/${portfolioId}`} className="mb-3  btn btn-primary ">Add New Holding</a>
+          <a href= {`/buyer/add-holding/${portfolioId}`} className="mb-3  btn btn-primary ">Add New Holding</a>
           
           
        
@@ -74,7 +74,7 @@ export default function BuyerHoldings(){
                 <h5>Rs. {New.quantity*New.price}</h5>
                 </div>
             </div>
-          <a href= {`/holdings/${New._id}`} className="mb-3  btn btn-warning btn-block">Delete Holdings</a>
+          <a href= {`/buyer/holdings/${New._id}`} className="mb-3  btn btn-warning btn-block">Delete Holdings</a>
           
           
         </div>
@@ -102,7 +102,7 @@ else{return(<><div id="content-wrapper">
 <div className="col-lg-6 text-right ">
         
        
-          <a href= {`/add-holding/${portfolioId}`} className="mb-3  btn btn-primary ">Add New Holding</a>
+          <a href= {`/buyer/add-holding/${portfolioId}`} className="mb-3  btn btn-primary ">Add New Holding</a>
           
           
        

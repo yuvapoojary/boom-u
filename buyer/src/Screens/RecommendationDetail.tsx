@@ -27,7 +27,7 @@ export default function DetailRecommendation() {
 
   const [recommendation, getData] = useState<any>({});
 
-  const URL = `https://boominance.herokuapp.com/recommendation/${recommendationID}`;
+  const URL = `/recommendation/${recommendationID}`;
 
   useEffect(() => {
     getAllData();
@@ -45,7 +45,7 @@ export default function DetailRecommendation() {
 
   const [orderCount, getOrderData] = useState<any>({});
 
-  const OURL = `https://boominance.herokuapp.com/ordersByRecommendation/${recommendationID}`;
+  const OURL = `/ordersByRecommendation/${recommendationID}`;
 
   useEffect(() => {
     getAllDownloadsData();
@@ -115,7 +115,7 @@ export default function DetailRecommendation() {
                       <a href="#">
                         <img
                           className="card-img-top"
-                          src="%PUBLIC_URL%/assets/img/v1.webp"
+                          src="/buyer/assets/img/v1.webp"
                           alt="Card image cap"
                           height={350}
                         />

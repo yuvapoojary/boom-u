@@ -47,7 +47,7 @@ export default function RatingForm(){
 .then(function (response) {
   if(response.status===200){
       alert('Ratings has been given');
-      navigate(`/`);
+      navigate(`/buyer`);
       
   }
  

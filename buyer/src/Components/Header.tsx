@@ -17,7 +17,7 @@ export default function Header() {
           <img
             className="img-fluid"
             alt=""
-            src="%PUBLIC_URL%/assets/img/logo.svg"
+            src="/buyer/assets/img/logo.svg"
             width={150}
           />
         </a>
@@ -25,7 +25,7 @@ export default function Header() {
         <ul className="navbar-nav ml-auto ml-md-0 osahan-right-navbar">
           <li className="nav-item  no-arrow osahan-right-navbar-user">
             <a className="nav-link  user-dropdown-link" href="/profile">
-              <img alt="Avatar" src="%PUBLIC_URL%/assets/img//user.png" />
+              <img alt="Avatar" src="/buyer/assets/img//user.png" />
               {auth.user.Name}
             </a>
           </li>

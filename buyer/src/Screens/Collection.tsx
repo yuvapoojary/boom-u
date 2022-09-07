@@ -95,7 +95,7 @@ export default function Collection() {
                   <div className="main-title">
                     <div className="col-xl-12 col-sm-12 mb-3 ">
                       <a
-                        href={`/give-rating/${sellerID}`}
+                        href={`/buyer/give-rating/${sellerID}`}
                         className="btn btn-lg btn-primary"
                       >
                         Give Rating
@@ -110,21 +110,21 @@ export default function Collection() {
                       <div className="video-card-image">
                         <a
                           className="play-icon"
-                          href={`/recommendation/${rPost._id}`}
+                          href={`/buyer/recommendation/${rPost._id}`}
                         >
                           <i className="fas fa-info-circle" />
                         </a>
-                        <a href={`/recommendation/${rPost._id}`}>
+                        <a href={`/buyer/recommendation/${rPost._id}`}>
                           <img
                             className="img-fluid"
-                            src="%PUBLIC_URL%/assets/img/v1.webp"
+                            src="/buyer/assets/img/v1.webp"
                             alt=""
                           />
                         </a>
                       </div>
                       <div className="video-card-body">
                         <div className="video-title">
-                          <a href={`/recommendation/${rPost._id}`}>
+                          <a href={`/buyer/recommendation/${rPost._id}`}>
                             {rPost.Recommendation}
                           </a>
                         </div>
@@ -133,7 +133,7 @@ export default function Collection() {
                             title=""
                             data-placement="top"
                             data-toggle="tooltip"
-                            href={`/collections/${rPost.Seller._id}`}
+                            href={`/buyer/collections/${rPost.Seller._id}`}
                             data-original-title="Verified"
                           >
                             {rPost.Seller.Username}
@@ -146,7 +146,7 @@ export default function Collection() {
                             title=""
                             data-placement="top"
                             data-toggle="tooltip"
-                            href={`/recommendation/${rPost._id}`}
+                            href={`/buyer/recommendation/${rPost._id}`}
                           ></a>
                         </div>
                       </div>

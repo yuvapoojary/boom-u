@@ -17,7 +17,7 @@ export default function Refer() {
               <div className="card" style={{ borderRadius: '10px' }}>
                 <div className="card-body">
                   <img
-                    src="%PUBLIC_URL%/assets/img/sucess-transparent.gif"
+                    src="/buyer/assets/img/sucess-transparent.gif"
                     width={150}
                   />
                   <h3>Refering is Caring</h3>

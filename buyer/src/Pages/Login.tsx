@@ -21,7 +21,7 @@ export default function Login() {
               <div className="login-main-left">
                 <div className="text-center mb-5 login-main-left-header pt-4">
                   <img
-                    src="assets/img/logo.svg"
+                    src="/buyer/assets/img/logo.svg"
                     className="img-fluid"
                     alt="LOGO"
                   />
@@ -68,7 +68,7 @@ export default function Login() {
 
                 <div className="text-center mt-5">
                   <p className="light-gray">
-                    Don’t have an account? <a href="/register">Sign Up</a>
+                    Don’t have an account? <a href="/buyer/register">Sign Up</a>
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Login() {
                 <div className="item">
                   <div className="carousel-login-card text-center">
                     <img
-                      src="assets/img/login.jpg"
+                      src="/buyer/assets/img/login.jpg"
                       style={{ width: '350px' }}
                       className="img-fluid"
                       alt="LOGO"

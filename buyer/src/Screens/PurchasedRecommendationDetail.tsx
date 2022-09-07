@@ -129,7 +129,7 @@ export default function PurchasedDetailRecommendation() {
                       <a href="#">
                         <img
                           className="card-img-top"
-                          src="%PUBLIC_URL%/assets/img/v1.webp"
+                          src="/buyer/assets/img/v1.webp"
                           alt="Card image cap"
                           height={350}
                         />

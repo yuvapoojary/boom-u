@@ -45,17 +45,17 @@ export default function BuyerOrders(){
       <div className="col-xl-3 col-sm-6 mb-3">
         <div className="video-card">
           <div className="video-card-image">
-            <a className="play-icon" href={`/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>
+            <a className="play-icon" href={`/buyer/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>
               <i className="fas fa-info-circle" />
             </a>
-            <a href={`/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>
+            <a href={`/buyer/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>
               <img className="img-fluid" src="assets/img/v1.webp" alt="" />
             </a>
            
           </div>
           <div className="video-card-body">
             <div className="video-title">
-              <a href={`/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>{rPost.recommendation.Recommendation}</a>
+              <a href={`/buyer/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}>{rPost.recommendation.Recommendation}</a>
             </div>
             
             <div className="video-page text-success">
@@ -64,17 +64,13 @@ export default function BuyerOrders(){
                 title=""
                 data-placement="top"
                 data-toggle="tooltip"
-                href={`/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}
+                href={`/buyer/purchasedrecommendation/${rPost.recommendation._id}/${rPost._id}`}
 
               >
                
               </a>
             </div>
-            <div className="video-view">
-          
-             
-              <i className="fas fa-clock" /> 23 hours ago
-            </div>
+            
           </div>
         </div>
       </div>

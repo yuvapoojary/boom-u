@@ -7,7 +7,7 @@ export default function Sidebar() {
     <>
       <ul className="sidebar navbar-nav">
         <li className="nav-item ">
-          <a className="nav-link" href="/">
+          <a className="nav-link" href="/buyer/">
             <i className="fas fa-fw fa-home" />
             <span>Home</span>
           </a>

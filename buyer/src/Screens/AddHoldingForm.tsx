@@ -43,7 +43,7 @@ export default function AddHoldingForm(){
 .then(function (response) {
   if(response.status===200){
       alert('Holding Added Successfully');
-      navigate(`/holdings/${portfolioId}`);
+      navigate(`/buyer/holdings/${portfolioId}`);
       
   }
  
