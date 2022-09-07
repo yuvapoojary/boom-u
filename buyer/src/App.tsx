@@ -41,7 +41,6 @@ const Navigation = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
 
@@ -68,7 +67,6 @@ const Navigation = () => {
       <Route path="/refer-a-friend" element={<Refer />} />
       <Route path="/collections/:sellerId" element={<Collections />} />
       <Route path="/give-rating/:sellerId" element={<GiveRating />} />
-      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
