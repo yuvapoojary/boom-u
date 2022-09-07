@@ -67,7 +67,7 @@ const Navigation = () => {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="recommender">
+      <BrowserRouter basename="/recommender">
         <AuthProvider>
           <Navigation />
         </AuthProvider>
