@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Routes, //replaces "Switch" used till v5
   Route,
+  Navigate,
 } from 'react-router-dom';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -37,6 +38,7 @@ const Navigation = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
 
@@ -60,6 +62,7 @@ const Navigation = () => {
       <Route path="/user-guide" element={<Userguide />} />
       <Route path="/reviews" element={<Review />} />
       <Route path="/rating" element={<MyRatings />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
