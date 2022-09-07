@@ -44,7 +44,7 @@ export default function RecommendationForm() {
   const [recommendation, setRecommendation] = useState('');
 
   const [target, setTarget] = useState('');
-  const [TargetVisible, setTargetVisible] = useState('');
+  const [TargetVisible, setTargetVisible] = useState(false);
   const [targetperiod, settargetperiod] = useState('');
   const [targetPeriodVisible, settargetPeriodVisible] = useState('');
   const [currentmarketprice, setcurrentmarketprice] = useState('');
@@ -82,7 +82,7 @@ export default function RecommendationForm() {
   const [message, setMessage] = useState('');
   const [StopLoss, setStopLoss] = useState('');
   const [DividendYield, setDividendYield] = useState('');
-  const [media, setmedia] = useState('');
+  const [media, setmedia] = useState();
 
   let handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -91,7 +91,7 @@ export default function RecommendationForm() {
     data.append('seller', auth.user._id);
     data.append('target', target);
     //@ts-ignore
-    data.append('TargetVisible', false);
+    data.append('TargetVisible', TargetVisible);
     data.append('targetperiod', targetperiod);
     //@ts-ignore
     data.append('targetPeriodVisible', false);
@@ -134,7 +134,7 @@ export default function RecommendationForm() {
     data.append('one_year', one_year);
     data.append('three_years', three_years);
     //@ts-ignore
-    data.append('media', null);
+    data.append('image', media);
     data.append('Price', Price);
     data.append('Expiry', Expiry);
 
@@ -258,6 +258,24 @@ export default function RecommendationForm() {
                           <div className="col-sm-12 col-md-4">
                             <div className="form-group">
                               <label className="form-label">Target</label>
+                              <div className="form-check">
+                                <input
+                                  className="form-check-input"
+                                  type="checkbox"
+                                  id="flexCheckDefault"
+                                  // @ts-ignore
+                                  onChange={(e) =>
+                                    setTargetVisible(e.target.checked)
+                                  }
+                                />
+                                <label
+                                  className="form-check-label"
+                                  // @ts-ignore
+                                  for="flexCheckDefault"
+                                >
+                                  Show
+                                </label>
+                              </div>
                               <input
                                 type="text"
                                 className="form-control"
@@ -636,22 +654,24 @@ export default function RecommendationForm() {
                                   />
                                 </div>
                               </div>
-                              {/* <div className="col-md-12">
-          
-          <div className="form-group mb-0">
-          <label className="form-label">Upload Media</label>
-            <input
-             type="file"
-             className="form-control"
-             value={media}
-             placeholder=""
-             
-             name={media}
-             //@ts-ignore
-             onChange={(e) => setmedia(e.target.files[0])}
-            />
-          </div>
-        </div> */}
+                              <div className="col-md-12">
+                                <div className="form-group mb-0">
+                                  <label className="form-label">
+                                    Upload Media
+                                  </label>
+                                  <input
+                                    type="file"
+                                    className="form-control"
+                                    // value={media}
+                                    placeholder=""
+                                    name="media"
+                                    onChange={(e) =>
+                                      //@ts-ignore
+                                      setmedia(e.target.files[0])
+                                    }
+                                  />
+                                </div>
+                              </div>
                             </>
                           ) : null}
                         </div>

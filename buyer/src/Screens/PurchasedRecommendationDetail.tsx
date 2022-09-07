@@ -295,6 +295,14 @@ export default function PurchasedDetailRecommendation() {
                               </tr>
                             </thead>
                           </table>
+                          <a
+                            className="btn btn-primary text-white"
+                            href={recommendation.Image}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            View Media
+                          </a>
                         </>
                       ) : null}
                     </div>

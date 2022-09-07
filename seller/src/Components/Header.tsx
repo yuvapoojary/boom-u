@@ -7,7 +7,7 @@ export default function Header() {
 
   const [category, getData] = useState<any[]>([]);
 
-  const URL = `/api/categories`;
+  const URL = `/categories`;
 
   useEffect(() => {
     getAllData();

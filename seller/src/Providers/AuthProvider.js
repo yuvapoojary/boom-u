@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
-axios.defaults.baseURL = `/api`;
+axios.defaults.baseURL = `https://boominance.com/api`;
 
 axios.interceptors.response.use(
   (response) => response,

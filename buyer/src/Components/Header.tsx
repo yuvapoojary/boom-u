@@ -24,8 +24,8 @@ export default function Header() {
         <form className="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0 osahan-navbar-search"></form>
         <ul className="navbar-nav ml-auto ml-md-0 osahan-right-navbar">
           <li className="nav-item  no-arrow osahan-right-navbar-user">
-            <a className="nav-link  user-dropdown-link" href="/profile">
-              <img alt="Avatar" src="/buyer/assets/img//user.png" />
+            <a className="nav-link  user-dropdown-link" href="/buyer/profile">
+              <img alt="Avatar" src="/buyer/assets/img/user.png" />
               {auth.user.Name}
             </a>
           </li>
