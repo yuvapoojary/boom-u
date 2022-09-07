@@ -22,7 +22,7 @@ export default function Register() {
       })
       .then((res) => {
         alert('Signed up successfully, please login to continue');
-        navigation('/');
+        navigation('/buyer/');
       })
       .catch((err) => alert(err.message));
   };
@@ -36,7 +36,7 @@ export default function Register() {
               <div className="login-main-left">
                 <div className="text-center mb-5 login-main-left-header pt-4">
                   <img
-                    src="assets/img/logo.svg"
+                    src="/buyer/assets/img/logo.svg"
                     className="img-fluid"
                     alt="LOGO"
                   />
@@ -106,7 +106,7 @@ export default function Register() {
                 <div className="item">
                   <div className="carousel-login-card text-center">
                     <img
-                      src="assets/img/login.jpg"
+                      src="/buyer/assets/img/login.jpg"
                       style={{ width: '350px' }}
                       className="img-fluid"
                       alt="LOGO"

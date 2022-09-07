@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 
 export default function Register() {
   const [categories, getData] = useState([])
-  const URL = 'http://localhost:7555/categories/'
+  const URL = '/categories/'
 
   useEffect(() => {
     getAllData()
@@ -60,7 +60,7 @@ export default function Register() {
               <div className='login-main-left'>
                 <div className='text-center mb-5 login-main-left-header pt-4'>
                   <img
-                    src='assets/img/logo.svg'
+                    src='/recommender/assets/img/logo.svg'
                     className='img-fluid'
                     alt='LOGO'
                   />
@@ -171,7 +171,7 @@ export default function Register() {
 
                 <div className='text-center mt-5'>
                   <p className='light-gray'>
-                    Already have an account? <a href='/login'>Sign In</a>
+                    Already have an account? <a href='/recommender/login'>Sign In</a>
                   </p>
                 </div>
               </div>

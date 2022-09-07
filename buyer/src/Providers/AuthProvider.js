@@ -46,7 +46,7 @@ export default function AuthProvider({ children }) {
     localStorage.clear();
     axios.defaults.headers.common['authorization'] = null;
     setUser(null);
-    window.location.href = '/';
+    window.location.href = '/buyer';
   }, [setUser]);
 
   const value = useMemo(

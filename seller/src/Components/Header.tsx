@@ -7,7 +7,7 @@ export default function Header() {
 
   const [category, getData] = useState<any[]>([]);
 
-  const URL = `http://localhost:7555/categories`;
+  const URL = `/api/categories`;
 
   useEffect(() => {
     getAllData();
@@ -36,7 +36,7 @@ export default function Header() {
           <img
             className="img-fluid"
             alt=""
-            src="/assets/img/logo.svg"
+            src="/recommender/assets/img/logo.svg"
             width={150}
           />
         </a>
@@ -56,7 +56,7 @@ export default function Header() {
               {category.map((cat) => (
                 <a
                   className="dropdown-item"
-                  href={`/add-recommendation/${cat._id}`}
+                  href={`/recommender/add-recommendation/${cat._id}`}
                 >
                   {cat.title}
                 </a>
@@ -66,7 +66,7 @@ export default function Header() {
 
           <li className="nav-item  no-arrow osahan-right-navbar-user">
             <a className="nav-link  user-dropdown-link" href="/profile">
-              <img alt="Avatar" src="%PUBLIC_URL%/assets/img//user.png" />
+              <img alt="Avatar" src="/recommender/assets/img//user.png" />
               {auth.user.Name}
             </a>
           </li>

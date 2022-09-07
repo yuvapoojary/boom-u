@@ -68,7 +68,7 @@ export default function Login() {
 
                 <div className="text-center mt-5">
                   <p className="light-gray">
-                    Don’t have an account? <a href="/register">Sign Up</a>
+                    Don’t have an account? <a href="/recommender/register">Sign Up</a>
                   </p>
                 </div>
               </div>

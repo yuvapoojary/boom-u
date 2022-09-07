@@ -7,7 +7,7 @@ import axios from 'axios';
 
 function AddSubCategories ()  {
   const [categories, getData] = useState<any[]>([])
-  const URL = 'https://boominance.herokuapp.com/categories/';
+  const URL = '/api/categories/';
 
   useEffect(() => {
     getAllData();

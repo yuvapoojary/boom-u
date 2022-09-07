@@ -31,7 +31,7 @@ export default function Verify() {
               <div className="login-main-left">
                 <div className="text-center mb-5 login-main-left-header pt-4">
                   <img
-                    src="assets/img/logo.svg"
+                    src="/recommender/assets/img/logo.svg"
                     className="img-fluid"
                     alt="LOGO"
                   />
@@ -70,7 +70,7 @@ export default function Verify() {
                 <div className="item">
                   <div className="carousel-login-card text-center">
                     <img
-                      src="assets/img/login.jpg"
+                      src="/recommender/assets/img/login.jpg"
                       style={{ width: '350px' }}
                       className="img-fluid"
                       alt="LOGO"

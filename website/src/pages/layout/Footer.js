@@ -66,13 +66,13 @@ class Footer extends React.Component {
                       <a href="how-it-works">Contact For Business</a>
                     </li>
                     <li>
-                      <a href="https://boominance.com/register">
+                      <a href="/recommender/register">
                         Become a Recommender
                       </a>
                     </li>
 
                     <li>
-                      <a href="buyer">Contact Us</a>
+                      <a href="/buyer/registeri">Become a Buyer</a>
                     </li>
                   </ul>
                 </div>
@@ -133,7 +133,7 @@ class Footer extends React.Component {
               >
                 <p>
                   &copy; 2022{' '}
-                  <a href="https://easewebs.com">Boominance Pvt Ltd</a> All
+                  <a href="#">Boominance Pvt Ltd</a> All
                   Rights Reserved.
                 </p>
               </div>

@@ -16,7 +16,7 @@ export default function Success() {
               <div className="card" style={{ borderRadius: '10px' }}>
                 <div className="card-body">
                   <img
-                    src="%PUBLIC_URL%/assets/img/sucess-transparent.gif"
+                    src="/buyer/assets/img/sucess-transparent.gif"
                     width={150}
                   />
                   <h3>Recommendation Purchased Successfully</h3>
@@ -24,8 +24,8 @@ export default function Success() {
                     Now you can check your purchased Recommendations anytime
                     from here
                   </p>
-                  <a href="/purchases" className="btn btn-primary btm-md">
-                    Check Your Collection
+                  <a href="/buyer/purchases" className="btn btn-primary btm-md">
+                    Check Your Purchases
                   </a>
                 </div>
               </div>

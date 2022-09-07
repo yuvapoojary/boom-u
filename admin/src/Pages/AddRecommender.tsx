@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function AddRecommender ()  {
   const navigate = useNavigate();
   const [categories, getData] = useState<any[]>([])
-  const URL = '/categories/';
+  const URL = '/api/categories/';
 
   useEffect(() => {
     getAllData();
@@ -54,7 +54,7 @@ const getAllData = () => {
       console.log(data)
       var config = {
         method: 'post',
-        url: 'http://localhost:7555/sellers/',
+        url: '/api/sellers/',
         headers: { 
           'Content-Type': 'application/json'
         },
@@ -64,7 +64,7 @@ const getAllData = () => {
 .then(function (response) {
   if(response.status===200){
       alert('Recommender Added Successfully');
-      navigate("/recommenders");
+      navigate("/admin/recommenders");
       
   }
  
