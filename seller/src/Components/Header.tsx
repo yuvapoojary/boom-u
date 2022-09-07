@@ -7,7 +7,7 @@ export default function Header() {
 
   const [category, getData] = useState<any[]>([]);
 
-  const URL = `http://localhost:7555/categories`;
+  const URL = `/api/categories`;
 
   useEffect(() => {
     getAllData();
@@ -56,7 +56,7 @@ export default function Header() {
               {category.map((cat) => (
                 <a
                   className="dropdown-item"
-                  href={`/add-recommendation/${cat._id}`}
+                  href={`/recommender/add-recommendation/${cat._id}`}
                 >
                   {cat.title}
                 </a>

@@ -13,32 +13,32 @@ export default function Sidebar() {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/portfolio">
+          <a className="nav-link" href="/buyer/portfolio">
             <i className="fas fa-fw fa-briefcase" />
             <span>Portfolio</span>
           </a>
         </li>
        
         <li className="nav-item">
-          <a className="nav-link" href="/purchases">
+          <a className="nav-link" href="/buyer/purchases">
             <i className="fas fa-fw fa-shopping-bag " />
             <span>Purchases</span>
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/refer-a-friend">
+          <a className="nav-link" href="/buyer/refer-a-friend">
             <i className="fas fa-fw fa-share-alt " />
             <span>Refer a Friend</span>
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/settings">
+          <a className="nav-link" href="/buyer/settings">
             <i className="fas fa-fw fa-cog " />
             <span>Settings</span>
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/support">
+          <a className="nav-link" href="/buyer/support">
             <i className="fas fa-fw fa-question-circle " />
             <span>Help &amp; Support</span>
           </a>
