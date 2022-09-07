@@ -73,7 +73,7 @@ export default function Settings(){
 .then(function (response) {
   if(response.status===200){
       alert('Profile has beeen updated');
-      navigate(`/settings`);
+      navigate(`/recommender/settings`);
       
   }
  

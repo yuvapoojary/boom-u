@@ -57,7 +57,7 @@ let currency ='';
 .then(function (response) {
   if(response.status===200){
       alert('Review has been accepted, status changed');
-      navigate('/reviews')
+      navigate('/recommender/reviews')
       }
  
 })

@@ -82,11 +82,7 @@ export default function Recommendations(){
                
               </a>
             </div>
-            <div className="video-view">
-          
-             
-              <i className="fas fa-clock" /> 23 hours ago
-            </div>
+            
           </div>
         </div>
       </div>

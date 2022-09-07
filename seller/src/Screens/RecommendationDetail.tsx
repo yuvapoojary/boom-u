@@ -91,24 +91,7 @@ export default function DetailRecommendation() {
                       </h4>
                       <div className="entry-meta">
                         <ul className="tag-info list-inline">
-                          <li className="list-inline-item">
-                            <a href="#">
-                              <i className="fas fa-calendar" /> March 6, 2018
-                            </a>
-                          </li>
-                          {/* <li className="list-inline-item">
-              <i className="fas fa-folder" />{" "}
-              <a rel="category tag" href="#">
-              {recommendation.category_id.title}
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <i className="fas fa-tag" />{" "}
-              <a rel="tag" href="#">
-              {recommendation.sub_category_id.sub_category}
-              </a>
-             
-            </li> */}
+                          
                           <li className="list-inline-item">
                             <i className="fas fa-comment" />{' '}
                             <a href="#">
